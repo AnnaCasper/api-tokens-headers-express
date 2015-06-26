@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/" method="post")
+    label(for="add_story") Add Story
+    p
+    input(type="text" id="add_story" name="add_story")
+    p
+    input(type="submit" value="Add Story")
+  for val in response  
+    p= val.name
